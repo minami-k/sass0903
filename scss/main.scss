@@ -1,0 +1,289 @@
+/*color*/
+$main-color:#f4f4f4;
+$text-color:#d3ab55;
+$color:#fff;
+$bg-color:#262626;
+$nav-bg-color:#1f1d1d;
+$nav-font-color:#bbb;
+
+
+
+/*font*/
+$main-font: "Dancing Script", cursive;
+$title-font:"Nunito", sans-serif;
+$font3: "Josefin Sans", sans-serif;
+
+/*font-weight*/
+$weight300: 300;
+
+
+$position-center:center;
+
+
+  * {
+    margin: 0;
+    padding: 0; }
+  
+  body {
+    background-color: $bg-color; 
+}
+  
+  
+  .header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/bg.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+
+    .brand {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 17%;
+      left: 50%;
+      transform: translate(-50%, -50%); 
+    }
+    }
+
+
+    .header-banner {
+      text-align: $position-center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); 
+    }
+  
+  .about-us {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+ }
+  
+    .about-us-left {
+      width: 40%;
+      position: relative;
+      left: -200px; 
+     
+      img {
+        width: 100%;
+        opacity: 0.7; 
+    }
+}
+
+    .about-us-right {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 100px;
+      box-sizing: border-box; 
+     
+      
+      .stars {
+        margin: 30px 0; }
+        
+      .star {
+        font-size: 15px;
+        color: $text-color;
+        margin-left: 10px; }
+      
+      .description {
+        font-family: $font3;
+        font-size: 1.2rem;
+        font-style: italic;
+        color: $nav-font-color;
+        text-align: justify; }
+
+    .description::first-letter {
+          padding-left: 50px; }
+    }
+        
+  .gallery .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap; }
+  
+  .footer {
+    padding: 70px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    
+    .footer-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 70px; 
+    }
+    .social-media {
+      display: flex;
+      width: 300px;
+      justify-content: space-between;
+      margin-bottom: 70px; 
+    }
+      
+      .social-media-item {
+        list-style: none;
+     }
+      .social-media-link {
+        text-decoration: none;
+        font-size: 50px;
+        color: $nav-font-color;
+        transition: color .7s; 
+    
+    &:hover {
+          color: $text-color;
+         }
+        }
+    }
+       
+    .footer-copyright-paragraph {
+      font-family: $font3;
+      font-size: 18px;
+      color: $nav-font-color;
+      font-weight: $weight300;
+      letter-spacing: 2px;
+      text-transform: capitalize; 
+    }
+      
+  
+  .logo {
+    font-size: 70px;
+    color: $text-color;
+    border: 3px solid $text-color;
+    border-radius: 50%;
+    margin-right: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+
+  }
+  
+  .main-name {
+    font-family: $title-font;
+    font-size: 50px;
+    color: $nav-font-color;
+    font-weight: $weight300;
+    letter-spacing: 2px;
+    text-transform: uppercase; }
+   
+  
+  .sub-name {
+    font-family: $font3;
+    font-size: 18px;
+    color: $nav-font-color;
+    text-align: center;
+    font-weight: $weight300;
+    letter-spacing: 2px;
+    text-transform: uppercase; }
+    
+  .main-heading {
+    font-family: $main-font;
+    font-size: 5rem;
+    font-weight: $weight300;
+    color:$text-color;
+    margin-bottom: 40px; }
+    
+  
+  .sub-heading {
+    font-family: $font3;
+    font-size: 2.5rem;
+    font-weight:$weight300;
+    color: $nav-font-color;
+    margin-bottom: 20px;
+    text-align:$position-center; 
+}
+    
+    
+  
+  .main-btn {
+    width: 170px;
+    height: 45px;
+    font-family: $font3;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $text-color;
+    background-color: transparent;
+    border: 1px solid $text-color;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s; 
+}
+    .main-btn:hover {
+      background-color: $text-color;
+      color: $bg-color; 
+    }
+   
+  
+  .card {
+    width: 33%;
+    height: 30vw;
+    position: relative;
+    overflow: hidden; 
+
+    &:hover .card-overlay {
+        left: 0;
+     }
+
+
+    .card-overlay {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      background-color: rgba(211, 171, 85, 0.7);
+      color: #fff;
+      z-index: 90;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: left 0.7s;
+      width: 100%;
+      height: 30vw;
+        
+     }
+
+      .card-overlay-heading {
+        font-family: $title-font;
+        font-size: 50px;
+        font-weight: $weight300;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+     }
+       
+        
+      .card-overlay-paragraph {
+        font-family: $font3;
+        font-size: 30px;
+        margin-bottom: 30px;
+        font-weight: $weight300;
+        letter-spacing: 2px;
+        text-transform: capitalize; 
+    }
+        
+      .card-overlay-btn {
+        width: 150px;
+        height: 40px;
+        color: $text-color;
+        background-color: #fff;
+        font-family: $font3;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 1px solid $text-color;
+        border-radius: 30px;
+        outline: none;
+        cursor: pointer; 
+    }
+       
+    .card-img {
+      object-fit: cover;
+      opacity: 0.5; }
+    }
